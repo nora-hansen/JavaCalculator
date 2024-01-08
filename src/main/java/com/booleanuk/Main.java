@@ -21,6 +21,7 @@ public class Main {
 
         showMenu();
         char option = sc.next().charAt(0);
+        System.out.println("Your choice: " + option);
 
         switch(option)
         {
@@ -28,28 +29,39 @@ public class Main {
                 Operations.addition(sc);
                 showMenu();
                 option = sc.next().charAt(0);
+                System.out.println("You multiplied but now: " + option);
+                break;
             }
             case 's': {
                 Operations.subtraction(sc);
                 showMenu();
                 option = sc.next().charAt(0);
+                System.out.println("You subtracted but now: " + option);
+                break;
             }
             case 'm': {
                 Operations.multiplication(sc);
                 showMenu();
                 option = sc.next().charAt(0);
+                System.out.println("You multiplied but now: " + option);
+                break;
             }
             case 'd': {
                 Operations.division(sc);
                 showMenu();
                 option = sc.next().charAt(0);
+                System.out.println("You divided but now: " + option);
+                break;
             }
-            case 'q': System.out.println("Buh-bye!"); break;
+            case 'q':
+                System.out.println("You quit: " + option);
+                System.out.println("Buh-bye!"); break;
             default:
             {
-                System.out.println("What? Try again");
                 showMenu();
                 option = sc.next().charAt(0);
+                System.out.println("I didn't know: " + option);
+                break;
             }
         }
     }
