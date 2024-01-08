@@ -20,7 +20,38 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         showMenu();
-        Operations.addition(sc);
+        char option = sc.next().charAt(0);
+
+        switch(option)
+        {
+            case 'a': {
+                Operations.addition(sc);
+                showMenu();
+                option = sc.next().charAt(0);
+            }
+            case 's': {
+                Operations.subtraction(sc);
+                showMenu();
+                option = sc.next().charAt(0);
+            }
+            case 'm': {
+                Operations.multiplication(sc);
+                showMenu();
+                option = sc.next().charAt(0);
+            }
+            case 'd': {
+                Operations.division(sc);
+                showMenu();
+                option = sc.next().charAt(0);
+            }
+            case 'q': System.out.println("Buh-bye!"); break;
+            default:
+            {
+                System.out.println("What? Try again");
+                showMenu();
+                option = sc.next().charAt(0);
+            }
+        }
     }
 
     /**
